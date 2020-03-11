@@ -90,16 +90,8 @@
 
 							// Disable banner load event (so it doesn't fire again).
 								$window.off('load.banner');
-
-							// Append video if supported.
-								if (!skel.vars.mobile
-								&&	!skel.breakpoint('large').active
-								&&	skel.vars.IEVersion > 9){
-									$banner.append('<video loop muted autoplay><source src="' + video + '.mp4" type="video/mp4"  /></video>');
-									setTimeout(()=>{
-										// document.getElementById('video-banner').play();
-									},2000);
-								}
+								$banner.append('<video loop muted autoplay><source src="' + video + '.mp4" type="video/mp4"  /></video>');
+						
 						});
 
 				// More button.
